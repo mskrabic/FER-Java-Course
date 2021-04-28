@@ -1,0 +1,1 @@
+For kao ime varijable u tagu {$ for for 1 "OK" "prolaz" $}{$END$}

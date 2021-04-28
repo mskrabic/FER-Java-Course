@@ -1,0 +1,1 @@
+Legalni \\ \{ escapovi {$= "\\ \" \n \r\t\"" $}

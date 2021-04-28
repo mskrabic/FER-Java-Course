@@ -1,0 +1,8 @@
+Number of people in the car
+Frequency
+1,100000 17,450000 35,200000
+0
+1000000
+100000
+
+Additional info about the graph, should be ignored by the program.

@@ -1,0 +1,20 @@
+The output consists of 4 columns. First column indicates if current object is directory (d), readable (r),
+writable (w) and executable (x). Second column contains object size in bytes that is right aligned and
+occupies 10 characters. Follows file creation date/time and finally file name.
+To obtain file attributes (such as creation date/time), see the following snippet.
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+Path path = Paths.get("d:/tmp/javaPrimjeri/readme.txt");
+BasicFileAttributeView faView = Files.getFileAttributeView(
+path, BasicFileAttributeView.class, LinkOption.NOFOLLOW_LINKS
+);
+BasicFileAttributes attributes = faView.readAttributes();
+FileTime fileTime = attributes.creationTime();
+String formattedDateTime = sdf.format(new Date(fileTime.toMillis()));
+System.out.println(formattedDateTime);
+The tree command expects a single argument: directory name and prints a tree (each directory level shifts
+output two charatcers to the right).
+The copy command expects two arguments: source file name and destination file name (i.e. paths and
+names). Is destination file exists, you should ask user is it allowed to overwrite it. Your copy command must
+work only with files (no directories). If the second argument is directory, you should assume that user wants
+to copy the original file into that directory using the original file name. You must implement copying
+yourself: you are not allowed to simply call copy methods from Files class

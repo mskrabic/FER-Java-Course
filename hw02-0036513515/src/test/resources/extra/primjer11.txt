@@ -1,0 +1,1 @@
+Prazni echo node je OK {$=$}

@@ -1,0 +1,1 @@
+{$for 1neispravnaVarijabla 1 2 step$}

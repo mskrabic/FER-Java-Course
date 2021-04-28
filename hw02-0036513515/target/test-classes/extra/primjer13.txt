@@ -1,0 +1,1 @@
+Minus kao operator {$= - 5 "Salala"$}
